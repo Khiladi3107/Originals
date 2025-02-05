@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The Originals - TV Show Official Website"
+    />
+    <title>The Originals</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    
+    }
+
+    /* Body and Background */
+    body {
+      background-color: #0a0a0a;
+      color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #333;
+    }
+
+    .navbar .logo img {
+      width: 150px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    /* Hero Section */
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      padding: 0;
+    }
+    .slides {
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      width: 100%;
+      position: relative;
+    }
+    .slide img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+}
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+}
+    .hero-content {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+    .cta-btn {
+      display: inline-block;
+      background-color: red;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
+
+    .hero {
+      background: url(img2.jpg) no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      padding: 10px 20px;
+      background-color: #e63946;
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+    }
+
+    .episodes ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .episodes li {
+      margin-bottom: 10px;
+    }
+
+    .episodes a {
+      color: #e63946;
+      text-decoration: none;
+    }
+
+    /* Gallery Images Hover Effect */
+    .gallery .images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start; /* Align images to the left */
+      gap: 10px; /* Adds spacing between images */
+    }
+
+    .gallery .images img {
+      width: 23%; /* Adjusted width to fit neatly */
+      height: 200px; /* Uniform height */
+      object-fit: cover; /* Ensures images don’t stretch */
+      border-radius: 5px; /* Optional for smooth edges */
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .gallery .images img:hover {
+      transform: scale(1.1); /* Slightly increase the size */
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Add a glowing shadow */
+      cursor: pointer;
+    }
+
+    /* Contact Form */
+    .contact form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      padding: 10px;
+      background-color: #e63946;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+    }
+  </style>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="z" alt="The Originals Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#episodes">Episodes</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="slider" id="home">
+      <div class="slides fade">
+        <div class="slide active">
+          <img src="img2.jpg" alt="Slide 1" />
+          <div class="hero-content">
+            <h1>The Action Series</h1>
+            <p>Action. Horror. Thrillers.</p>
+            <a href="#episodes" class="cta-btn">Explore Episodes</a>
+          </div>
+        </div>
+        <div class="slide fade">
+          <img src="Skyscraper2.jpg" alt="Slide 2" />
+          <div class="hero-content">
+            <h1>Another Show</h1>
+            <p>Drama. Mystery. Adventure.</p>
+            <a href="#episodes" class="cta-btn">Explore Episodes</a>
+          </div>
+        </div>
+        <div class="slide fade">
+          <img src="Army of dead.jpg" alt="Slide 3" />
+          <div class="hero-content">
+            <h1>Thrilling Series</h1>
+            <p>Sci-Fi. Fantasy. Action.</p>
+            <a href="#episodes" class="cta-btn">Explore Episodes</a>
+          </div>
+        </div>
+        <div class="slide fade">
+          <img src="Avengers-infinity war.jpg" alt="Slide 4" />
+          <div class="hero-content">
+            <h1>New Exciting Show</h1>
+            <p>Action. Drama. Mystery.</p>
+            <a href="#episodes" class="cta-btn">Explore Episodes</a>
+          </div>
+        </div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2>About The Website</h2>
+      <p>
+        This website features a vast collection of thrilling and suspenseful
+        movies, including supernatural dramas like The Originals. 
+      Explore a vast collection of movies, trailers, and exclusive content.
+      Whether you're a fan of mystery, horror, or epic action films, we've got
+      something for you. Stay updated with the latest releases,
+      behind-the-scenes insights, and character deep dives. Join our community
+      of movie enthusiasts and discover hidden gems!</p>
+    </section>
+
+    <!-- Episodes Section -->
+    <section class="episodes" id="episodes">
+      <h2>Movies Trailers</h2>
+      <ul>
+        <li>
+          <a href="All of Us Are Dead _ Official Teaser _ Netflix.mp4"
+            >All of Us Are Dead _ Official Teaser</a
+          >
+        </li>
+        <li>
+          <a href="Skyscraper - Official Trailer [HD].mp4"
+            >Skyscraper - Official Trailer</a
+          >
+        </li>
+        <li>
+          <a
+            href="Marvel Studios' Avengers_ Infinity War - Official Trailer.mp4"
+            >Avengers_Infinity-War-Official Trailer</a
+          >
+        </li>
+        <li>
+          <a href="Army of the Dead _ Official Trailer _ Netflix.mp4"
+            >Army of the Dead _ Official Trailer</a
+          >
+        </li>
+
+        <!-- Add more episodes here -->
+      </ul>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+      <h2>Gallery</h2>
+      <div class="images">
+        <img src="img2.jpg" alt="Character 1" />
+        <img src="Skyscraper2.jpg" alt="Character 2" />
+        <img src="Avengers-infinity war.jpg" alt="Character 3" />
+        <img src="Army of dead.jpg" alt="Character 4" />
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <form action="#">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 The Originals. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+<script>
+  let index = 0;
+  const slides = document.querySelector(".slides");
+  const totalSlides = document.querySelectorAll(".slide");
+  let lastslide = totalSlides.length-1
+  let firstslide = 0
+  
+  function moveSlide(step) {
+    index += step
+    console.log(index);
+    if(index > lastslide)index = 0
+    if(index < firstslide) index = lastslide
+    for (let i = 0; i < totalSlides.length; i++) {
+           totalSlides[i].style.display = "none"
+    }
+    totalSlides[index].style.display = "block"
+  }
+
+  setInterval(()=>{moveSlide(1)},3000)
+
+  
+</script>
