@@ -32,11 +32,11 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem;
-      background-color: #333;
+      background-color: #585757;
     }
 
     .navbar .logo img {
-      width: 150px;
+      width: 60px;
     }
 
     .nav-links {
@@ -54,30 +54,6 @@
       font-weight: bold;
       text-transform: uppercase;
     }
-
-    /* Menu bar  */
-    .container {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
-}
 
     /* Hero Section */
 
@@ -312,7 +288,7 @@
     <!-- Navbar -->
     <nav class="navbar">
       <div class="logo">
-        <img src="z" alt="The Originals Logo" />
+        <img src="Original_Film_logo.jpg" alt="The Originals Logo" />
       </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
@@ -322,12 +298,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-
-    <div class="container" onclick="myFunction(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
 
     <!-- Hero Section -->
     <section class="slider" id="home">
@@ -444,11 +414,6 @@
 </html>
 <script>
 
-function myFunction(x) {
-  x.classList.toggle("change");
-}
-
-
   let index = 0;
   const slides = document.querySelector(".slides");
   const totalSlides = document.querySelectorAll(".slide");
@@ -470,3 +435,4 @@ function myFunction(x) {
 
   
 </script>
+                                   
