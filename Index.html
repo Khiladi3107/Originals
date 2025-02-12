@@ -76,6 +76,12 @@
       object-fit: contain;
     }
 
+    /* .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    } */
+
     /* Fading animation */
     .fade {
         animation-name: fade;
@@ -179,7 +185,7 @@
     .gallery .images {
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start; /* Align images to the left */
+      justify-content: center; /* Align images to the left */
       gap: 10px; /* Adds spacing between images */
     }
 
@@ -358,10 +364,10 @@
     <div class="topnav" id="myTopnav">
       <img src="logo.jpg" alt="The Originals logo">
       <a href="#home" class="active">Home</a>
-      <a href="#episodes">Trailers</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#episodes">Trailers</a>
       <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
@@ -372,7 +378,7 @@
     <section class="slider" id="home">
       <div class="slides fade">
         <div class="slide active">
-          <img src="img2.jpg" alt="Slide 1" />
+          <img src="All Of Us Are Dead2.jpg" alt="Slide 1" />
           <div class="hero-content">
             <h1>The Action Series</h1>
             <p>Action. Horror. Thrillers.</p>
@@ -380,7 +386,7 @@
           </div>
         </div>
         <div class="slide fade">
-          <img src="Skyscraper2.jpg" alt="Slide 2" />
+          <img src="skyScraper.png" alt="Slide 2" />
           <div class="hero-content">
             <h1>Another Show</h1>
             <p>Drama. Mystery. Adventure.</p>
@@ -396,10 +402,18 @@
           </div>
         </div>
         <div class="slide fade">
-          <img src="Avengers-infinity war.jpg" alt="Slide 4" />
+          <img src="Betaal.jpg" alt="Slide 4" />
           <div class="hero-content">
             <h1>New Exciting Show</h1>
             <p>Action. Drama. Mystery.</p>
+            <a href="#episodes" class="cta-btn">Explore Episodes</a>
+          </div>
+        </div>
+        <div class="slide fade">
+          <img src="Avengers-End game.jpg" alt="Slide 5" />
+          <div class="hero-content">
+            <h1>New Exciting Show</h1>
+            <p>Action. Adventure. Sci-Fi.</p>
             <a href="#episodes" class="cta-btn">Explore Episodes</a>
           </div>
         </div>
@@ -413,11 +427,11 @@
       <h2>About The Website</h2>
       <p>
         This website features a vast collection of thrilling and suspenseful
-        movies, including supernatural dramas like The Originals.
-        Whether you're a fan of mystery, horror, or epic action films, we've got
-        something for you. Stay updated with the latest releases,
-        behind-the-scenes insights, and character deep dives. Join our community
-        of movie enthusiasts and discover hidden gems!
+        movies, including supernatural dramas like The Originals. Here you can 
+        watch top best Netflix Movies and webseriseWhether you're a fan of mystery,
+        horror, or epic action films, we've got something for you. Stay updated with
+        the latest releases,behind-the-scenes insights, and character deep dives.
+        Join our community of movie enthusiasts and discover hidden gems!
       </p>
     </section>
 
@@ -432,19 +446,20 @@
         </li>
         <li>
           <a href="SKYSCRAPER Trailer - Hindi.mp4"
-            >Skyscraper - Official Trailer</a
-          >
+            >Skyscraper - Official Trailer</a>
         </li>
         <li>
           <a
-            href="Avengers_ Infinity War _ Official Hindi Trailer  _ In cinemas April 27, 2018.mp4"
-            >Avengers_Infinity-War-Official Trailer</a
-          >
+            href="Betaal Official Trailer _ Netflix India.mp4"
+            >Betaal Official Trailer</a>
         </li>
         <li>
           <a href="Army of the Dead _ Zack Snyder _ Hindi Trailer _ Netflix India.mp4"
-            >Army of the Dead _ Official Trailer</a
-          >
+            >Army of the Dead _ Official Trailer</a>
+        </li>
+        <li>
+          <a href="Avengers _  EndGame_Official Teaser Trailer _ Hindi _ In Cinemas April 26.mp4"
+            >Avengers _  End Game _ Official Trailer</a>
         </li>
 
         <!-- Add more episodes here -->
@@ -455,10 +470,11 @@
     <section class="gallery" id="gallery">
       <h2>Gallery</h2>
       <div class="images">
-        <img src="img2.jpg" alt="Character 1" />
-        <img src="Skyscraper2.jpg" alt="Character 2" />
-        <img src="Avengers-infinity war.jpg" alt="Character 3" />
+        <img src="All Of Us Are Dead2.jpg" alt="Character 1" />
+        <img src="SkyScraper.png" alt="Character 2" />
+        <img src="Betaal.jpg" alt="Character 3" />
         <img src="Army of dead.jpg" alt="Character 4" />
+        <img src="Avengers-End game.jpg" alt="Character 4" />
       </div>
     </section>
 
@@ -483,8 +499,6 @@
   </body>
 </html>
 <script>
-
-
 
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -513,7 +527,5 @@ function myFunction() {
   }
 
   setInterval(()=>{moveSlide(1)},3000)
-
-  
 </script>
                                    
