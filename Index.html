@@ -98,7 +98,7 @@
     .slider {
       position: relative;
       width: 100%;
-      height: 410px;
+      height: 510px;
       overflow: hidden;
       padding: 0;
     }
@@ -273,71 +273,6 @@
       background-color: #333;
     }
 
-  /* @media screen and (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      text-align:right;
-    }
-
-    .nav-links {
-      flex-direction: column;
-      padding: 0;
-    }
-
-    .nav-links li {
-      margin: 10px 0;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-    }
-
-    .hero p {
-      font-size: 1rem;
-    }
-
-    .gallery .images {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .gallery .images img {
-      width: 90%;
-    }
-
-    .slider {
-      height: 300px;
-    }
-
-    .hero-content {
-      top: 30%;
-    }
-
-    .prev, .next {
-      padding: 5px;
-      font-size: 14px;
-    }
-
-    section {
-      padding: 30px 10px;
-    }
-
-    .contact form {
-      width: 90%;
-    }
-  } */
-
-
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    background: white;
-  }
-}
-
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
@@ -357,7 +292,7 @@
 .slider {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: 500px;
       overflow: hidden;
       padding: 0;
     }
@@ -374,13 +309,29 @@
       object-fit: contain;
     }
 
+    /* Intro Video Styling */
+    #intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  /* Ensures the video covers the screen */
+            z-index: 9999;  /* Makes sure the video is on top */
+        }
+        
+        /* Hide the main content initially */
+        #main-content {
+            display: none;
+        }
+
   </style>
 
   <body>
     <!-- <navbar -->
   <nav>
     <div class="topnav" id="myTopnav">
-      <img src="logo.jpg" alt="The Originals logo">
+      <img src="logo.png" alt="The Originals logo">
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#episodes">Trailers</a>
@@ -392,6 +343,15 @@
     </div>
   </nav>
 
+     <!-- Intro Video -->
+     <video id="intro" autoplay muted>
+      <source src="Black White Welcome To My Chanel YouTube Intro.mp4" type="video/mp4">
+      <!-- Your browser does not support the video tag. -->
+  </video>
+
+      <!-- Main Website Content -->
+      <div id="main-content">
+        
     <!-- Hero Section -->
     <section class="slider" id="home">
       <div class="slides fade">
@@ -422,7 +382,7 @@
         <div class="slide fade">
           <img src="Betaal.jpg" alt="Slide 4" />
           <div class="hero-content">
-            <h1>New Supernatural Series</h1>
+            <h1> Supernatural Series</h1>
             <p>Horror. Supernatural. Thriller.</p>
             <a href="#episodes" class="cta-btn">Explore Trailer</a>
           </div>
@@ -430,7 +390,7 @@
         <div class="slide fade">
           <img src="Avengers-End game.jpg" alt="Slide 5" />
           <div class="hero-content">
-            <h1>New Action movies</h1>
+            <h1> Action movies</h1>
             <p>Action. Adventure. Sci-Fi.</p>
             <a href="#episodes" class="cta-btn">Explore Trailer</a>
           </div>
@@ -438,7 +398,7 @@
         <div class="slide fade">
           <img src="Alice in Borderland.jpg" alt="Slide 6" />
           <div class="hero-content">
-            <h1>New  Mystery Series</h1>
+            <h1> Mystery Series</h1>
             <p>Action. Mystery. Sci-Fi</p>
             <a href="#episodes" class="cta-btn">Explore Trailer</a>
           </div>
@@ -446,15 +406,23 @@
         <div class="slide fade">
           <img src="transformer Rise of beast.jpg" alt="Slide 7" />
           <div class="hero-content">
-            <h1>New  Mystery Series</h1>
+            <h1> Sci-fi Series</h1>
             <p>Action. Mystery. Sci-Fi</p>
+            <a href="#episodes" class="cta-btn">Explore Trailer</a>
+          </div>
+        </div>
+        <div class="slide fade">
+          <img src="spiderman-homecoming.jpg" alt="Slide 7" />
+          <div class="hero-content">
+            <h1> Sci-fi Series</h1>
+            <p>Action. Comedy. Sci-Fi</p>
             <a href="#episodes" class="cta-btn">Explore Trailer</a>
           </div>
         </div>
         <div class="slide fade">
           <img src="badland hunters.jpg" alt="Slide 8" />
           <div class="hero-content">
-            <h1>New Action movies</h1>
+            <h1> Action movies</h1>
             <p>Action. Adventure. Sci-Fi.</p>
             <a href="#episodes" class="cta-btn">Explore Trailer</a>
           </div>
@@ -504,6 +472,9 @@
         <li>
           <a href="Badland Hunters _ Official Hindi Teaser Trailer _ हिन्दी टीज़र.mp4">Badland Hunters _ Official Trailer</a>
         </li>
+        <li>
+          <a href="Badland Hunters _ Official Hindi Teaser Trailer _ हिन्दी टीज़र.mp4">spiderman-homecoming _ Official Trailer</a>
+        </li>
         
 
         <!-- Add more episodes here -->
@@ -522,6 +493,7 @@
         <img src="Alice in Borderland.jpg" alt="Character 6" />
         <img src="transformer Rise of beast.jpg" alt="Character 7" />
         <img src="badland hunters.jpg" alt="Character 8" />
+        <img src="spiderman-homecoming.jpg" alt="Character 8" />
       </div>
     </section>
 
@@ -537,15 +509,35 @@
       </form>
     </section>
 
+
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 The Originals. All rights reserved.</p>
+      <p>&copy; 2025 The Movies'X. All rights reserved.</p>
+
     </footer>
+
+  </div>
 
     <script src="script.js"></script>
   </body>
 </html>
 <script>
+
+// Get the video and main content elements
+const intro = document.getElementById('intro');
+        const mainContent = document.getElementById('main-content');
+        
+        // Wait for the intro video to finish
+        intro.onended = function() {
+            // Hide the intro video
+            intro.style.display = 'none';
+            
+            // Show the main content
+            mainContent.style.display = 'block';
+        }
+
+
+
 
 function myFunction() {
   var x = document.getElementById("myTopnav");
